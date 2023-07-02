@@ -1,0 +1,141 @@
+---
+import { Icon } from "astro-iconify";
+---
+
+<nav>
+  <div class="image-container">
+    <img class="flag" src="/images/eu.png" alt="" />
+    <img class="flag" src="/images/esp.png" alt="" />
+    <img class="img-main" src="/images/grenoble.webp" alt="" />
+  </div>
+  <ul class="nav-list">
+    <li><a class="nav-element" href="/">présentation</a></li>
+    <li>
+      <a
+        class="nav-element"
+        href="https://www.helloasso.com/associations/association-des-parents-d-eleves-de-la-section-espagnole-de-grenoble/adhesions/adhesion-a-l-apseg-grenoble-2023-2024"
+        target="_blank">inscription</a
+      >
+    </li>
+    <li><a class="nav-element" href="/events">évenements</a></li>
+    <li><a class="nav-element" href="/contact">Contacts</a></li>
+    <li class="dropdown-wrapper">
+      <span class="nav-element">
+        Autres liens
+        <!-- <Icon class="more-icon" name="material-symbols:expand-more" /> -->
+      </span>
+      <div class="overflow-container">
+        <ul class="dropdown-list">
+          <li>
+            <a
+              class="nav-element"
+              href="https://cite-scolaire-internationale-europole.web.ac-grenoble.fr/"
+              target="_blank"
+            >
+              Cité Scolaire Internationale
+            </a>
+          </li>
+          <li>
+            <a
+              class="nav-element"
+              href="https://www.educacionyfp.gob.es/francia/eu/seccion-grenoble/portada.html"
+              target="_blank"
+            >
+              Sección Española Grenoble
+            </a>
+          </li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<style lang="scss">
+  .image-container {
+    height: 200px;
+    background: lightgray;
+    display: flex;
+    pointer-events: none;
+    .flag {
+      width: 50px;
+      object-fit: cover;
+      object-position: 0px;
+    }
+    .img-main {
+      flex-grow: 1;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  nav {
+    .nav-list {
+      flex-wrap: wrap;
+      gap: 2px;
+      background: var(--bg);
+      // border: 2px solid hsl(358, 75%, 58%);
+      padding: 0;
+      margin: 0;
+      display: flex;
+      list-style-type: none;
+      > li {
+        flex-grow: 1;
+        .nav-element {
+          margin: 0;
+          color: var(--bg);
+          display: flex;
+          font-weight: 600;
+          padding: 1em 2em;
+          align-items: center;
+          background: #457b9d;
+          text-decoration: none;
+          justify-content: center;
+          text-transform: capitalize;
+          transition: all 200ms ease;
+          &:hover {
+            color: var(--bg);
+            background: #1d3557;
+          }
+          .more-icon {
+            width: 2.5ch;
+            margin-left: 0.5em;
+          }
+        }
+      }
+
+      .dropdown-wrapper {
+        .nav-element {
+          margin-bottom: 2px;
+          z-index: 100;
+
+          position: relative;
+        }
+        .dropdown-list {
+          // overflow: hidden;
+          // position: absolute;
+
+          left: 0;
+          // width: 100%;
+          opacity: 0;
+
+          list-style-type: none;
+          padding: 0;
+
+          transition: all 200ms ease;
+        }
+        .overflow-container {
+          height: 0px;
+        }
+        li {
+          transition: all 200ms ease;
+        }
+
+        &:hover {
+          .dropdown-list {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+</style>

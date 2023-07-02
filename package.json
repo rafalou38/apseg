@@ -10,6 +10,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^2.7.2"
+    "astro": "^2.7.2",
+    "astro-iconify": "^1.2.0",
+    "sass": "^1.63.6"
   }
 }
