@@ -4,7 +4,7 @@ import { Icon } from "astro-iconify";
 
 <nav>
   <div class="image-container">
-    <img class="flag" src="/images/eu.png" alt="" />
+    <img class="flag flag-eu" src="/images/eu.png" alt="" />
     <img class="flag" src="/images/esp.png" alt="" />
     <img class="img-main" src="/images/grenoble.webp" alt="" />
   </div>
@@ -57,13 +57,19 @@ import { Icon } from "astro-iconify";
     display: flex;
     pointer-events: none;
     .flag {
-      width: 50px;
+      width: 10%;
+      max-width: 50px;
+      flex-shrink: 0;
       object-fit: cover;
       object-position: 0px;
+    }
+    .flag-eu {
+      object-fit: fill;
     }
     .img-main {
       flex-grow: 1;
       height: 100%;
+      // width: 90%;
       object-fit: cover;
     }
   }

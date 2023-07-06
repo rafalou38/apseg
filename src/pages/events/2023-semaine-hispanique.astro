@@ -1,0 +1,47 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="APSEG">
+  <main>
+    <h1>Semana Hipánica</h1>
+    <div class="wrapper">
+      <img src="/images/events/semaine-hispanique.jpg" alt="" />
+      <div class="text-wrapper">
+        <p>
+          Sur la semaine du 21 au 25 Novembre 2023 a eu lieu la "Semana
+          Hipánica" à la CSI où les enseignants ont prévu beaucoup d'activités
+          culturelles pour et avec nos enfants (voir document attaché). La
+          Semana se clôturera le vendredi 25 Novembre entre 17h et 19h par une
+          soirée de convivialité entre élèves, parents et professeurs de la
+          section autour de "tapas" hispánicas que les parents vont préparer.
+        </p>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2em;
+  }
+  h1 {
+    text-transform: capitalize;
+    font-size: 1.5em;
+    text-align: center;
+    text-decoration: underline;
+    margin: 2em;
+    margin-top: 2.5em;
+  }
+
+  .text-wrapper {
+    flex-grow: 1;
+    text-align: justify;
+    min-width: 300px;
+    width: 50%;
+  }
+</style>

@@ -1,0 +1,64 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="APSEG - Evenements">
+  <main>
+    <h1>Evenements</h1>
+    <!-- <p class="instructions">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quidem
+      illo nostrum provident porro delectus ipsum omnis atque repellat. Expedita
+      dignissimos sunt eaque, saepe laborum veniam libero ullam mollitia rem.
+    </p> -->
+
+    <div class="container">
+      <a class="card" href="/events/2023-semaine-hispanique">
+        <img src="/images/events/semaine-hispanique.jpg" alt="" />
+        <h2>Semaine Hispanique</h2>
+        <p class="subtitle">Du 21 au 25 Novembre 2023</p>
+      </a>
+      <a class="card" href="/events/2023-brunch">
+        <img src="" alt="" />
+        <h2>Brunch des associations</h2>
+        <p class="subtitle">samedi 3 juin 2023</p>
+      </a>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+  }
+  .card {
+    border-radius: 6px;
+    padding: 1em;
+    background: hsla(0, 0%, 0%, 0.025);
+    color: black;
+    text-decoration: none;
+  }
+  .card:hover {
+    background: hsla(0, 0%, 0%, 0.05);
+  }
+  .card:active {
+    background: hsla(0, 0%, 0%, 0.1);
+  }
+  img {
+    width: 300px;
+    height: 200px;
+    object-fit: contain;
+  }
+  h2 {
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    margin-bottom: 0;
+  }
+  .subtitle {
+    margin: 0.5em;
+    opacity: 0.8;
+    text-align: center;
+  }
+</style>
