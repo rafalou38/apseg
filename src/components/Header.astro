@@ -19,7 +19,7 @@ import { Icon } from "astro-iconify";
     </li>
     <li><a class="nav-element" href="/events">évenements</a></li>
     <li><a class="nav-element" href="/contact">Contacts</a></li>
-    <li class="dropdown-wrapper">
+    <li class="dropdown-wrapper" tabindex="1">
       <span class="nav-element">
         Autres liens
         <!-- <Icon class="more-icon" name="material-symbols:expand-more" /> -->
@@ -105,7 +105,8 @@ import { Icon } from "astro-iconify";
 
       .dropdown-wrapper {
         .nav-element {
-          margin-bottom: 2px;
+          // margin-bottom: 2px;
+          border-bottom: 2px solid var(--bg);
           z-index: 100;
 
           position: relative;
@@ -113,6 +114,7 @@ import { Icon } from "astro-iconify";
         .dropdown-list {
           // overflow: hidden;
           // position: absolute;
+          pointer-events: none;
 
           left: 0;
           // width: 100%;
@@ -130,10 +132,15 @@ import { Icon } from "astro-iconify";
           transition: all 200ms ease;
         }
 
-        &:hover {
+        &:hover,
+        &:focus-within {
           .dropdown-list {
+            pointer-events: all;
             opacity: 1;
           }
+        }
+        .dropdown-list:hover {
+          pointer-events: all;
         }
       }
     }
