@@ -1,0 +1,76 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="APSEG">
+  <main>
+    <h1>Vente de polvorones 2023</h1>
+    <div class="wrapper">
+      <img src="/images/events/surtido-azul.jpg" alt="" />
+      <div class="text-wrapper">
+        <p>
+          <p>
+            Comme chaque année, l’association APSEG vous propose un assortiments
+            de gateaux typiques de Noël « surtido, polvorones, hojaldres y
+            mazapanes" pour les fêtes de fin d’année.
+          </p>
+          <p>
+            Au-delà du plaisir de déguster en famille ou d’offrir à vos proches
+            ces produits typiquement espagnols, vous participez au soutien de
+            l’association. Les bénéfices de cette vente seront intégralement
+            utilisés pour soutenir financièrement les projets destinés aux
+            élèves de la section d'espagnol. N'hesitez pas à en parler autour de
+            vous à vos famillles, amis et collègues.
+          </p>
+          <p>
+            Comment commander?<br />
+            Sur le site de HelloAsso <br /><br />
+
+            <a
+              href="https://www.helloasso.com/associations/association-des-parents-d-eleves-de-la-section-espagnole-de-grenoble/boutiques/vente-de-noel-2023-mantecados-y-turrones"
+              >https://www.helloasso.com/associations/association-des-parents-d-eleves-de-la-section-espagnole-de-grenoble/boutiques/vente-de-noel-2023-mantecados-y-turrones</a
+            >
+
+            <br />
+            <br />
+
+            La date limite pour passer commande est le <strong
+              >mercredi 15 Novembre</strong
+            >.
+          </p>
+        </p>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2em;
+  }
+  h1 {
+    /* text-transform: capitalize; */
+    font-size: 1.5em;
+    text-align: center;
+    text-decoration: underline;
+    margin: 2em;
+    margin-top: 2.5em;
+  }
+
+  img {
+    width: 50%;
+  }
+
+  .text-wrapper {
+    flex-grow: 1;
+    text-align: justify;
+    min-width: 300px;
+    width: 100%;
+    padding: 0 4em;
+    font-size: 1.2rem;
+  }
+</style>

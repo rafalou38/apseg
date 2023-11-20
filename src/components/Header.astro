@@ -7,6 +7,7 @@ import { Icon } from "astro-iconify";
     <img class="flag flag-eu" src="/images/eu.png" alt="" />
     <img class="flag" src="/images/esp.png" alt="" />
     <img class="img-main" src="/images/grenoble.webp" alt="" />
+    <a class="logo" href="/">APSEG</a>
   </div>
   <ul class="nav-list">
     <li><a class="nav-element" href="/">présentation</a></li>
@@ -17,7 +18,7 @@ import { Icon } from "astro-iconify";
         target="_blank">inscription</a
       >
     </li>
-    <li><a class="nav-element" href="/events">évenements</a></li>
+    <li><a class="nav-element" href="/events">évènements</a></li>
     <li><a class="nav-element" href="/contact">Contacts</a></li>
     <li class="dropdown-wrapper" tabindex="1">
       <span class="nav-element">
@@ -52,11 +53,25 @@ import { Icon } from "astro-iconify";
 
 <style lang="scss">
   .image-container {
+    position: relative;
     height: 200px;
     background: lightgray;
     display: flex;
-    pointer-events: none;
+    .logo {
+      color: white;
+      position: absolute;
+      z-index: 1;
+      right: 1em;
+      top: 1em;
+      transform: translateY(-50%);
+      margin: 0;
+      font-size: 3em;
+      font-weight: 800;
+      text-decoration: none;
+    }
     .flag {
+      pointer-events: none;
+      user-select: none;
       width: 10%;
       max-width: 50px;
       flex-shrink: 0;
@@ -64,11 +79,16 @@ import { Icon } from "astro-iconify";
       object-position: 0px;
     }
     .flag-eu {
+      pointer-events: none;
+      user-select: none;
       object-fit: fill;
     }
     .img-main {
+      pointer-events: none;
+      user-select: none;
       flex-grow: 1;
       height: 100%;
+
       // width: 90%;
       object-fit: cover;
     }

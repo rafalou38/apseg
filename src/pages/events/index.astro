@@ -4,22 +4,41 @@ import Layout from "../../layouts/Layout.astro";
 
 <Layout title="APSEG - Evenements">
   <main>
-    <h1>Evenements</h1>
+    <h1 class="">évènements</h1>
     <!-- <p class="instructions">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quidem
       illo nostrum provident porro delectus ipsum omnis atque repellat. Expedita
       dignissimos sunt eaque, saepe laborum veniam libero ullam mollitia rem.
     </p> -->
 
+    <h2>2023-2024</h2>
     <div class="container">
       <a class="card" href="/events/2023-semaine-hispanique">
+        <img src="/images/events/2023-tapas.jpg" alt="" />
+        <h3>Semaine hispanique et apéro tapas de convivialité 2023</h3>
+        <p class="subtitle">Du 20 au 24 Novembre 2023</p>
+      </a>
+      <a class="card" href="/events/2023-polvorones">
+        <img src="/images/events/polvoron-de-almendra.jpg" alt="" />
+        <h3>Vente de polvorones 2023</h3>
+        <p class="subtitle">Date limite: <strong>15 novembre</strong></p>
+      </a>
+      <a class="card" href="/events/2023-vernissage">
+        <img src="/images/events/2023-vernissage.jpg" alt="" />
+        <h3>La Maison de L'internationale - Vernissage exposition</h3>
+        <p class="subtitle">Date limite: <strong>15 novembre</strong></p>
+      </a>
+    </div>
+    <h2>2022-2023</h2>
+    <div class="container">
+      <a class="card" href="/events/2022-semaine-hispanique">
         <img src="/images/events/semaine-hispanique.jpg" alt="" />
-        <h2>Semaine Hispanique</h2>
-        <p class="subtitle">Du 21 au 25 Novembre 2023</p>
+        <h3>Semaine Hispanique</h3>
+        <p class="subtitle">Du 21 au 25 Novembre 2022</p>
       </a>
       <a class="card" href="/events/2023-brunch">
         <img src="/images/events/2023-brunch.jpg" alt="" />
-        <h2>Brunch des associations</h2>
+        <h3>Brunch des associations</h3>
         <p class="subtitle">samedi 3 juin 2023</p>
       </a>
     </div>
@@ -30,7 +49,9 @@ import Layout from "../../layouts/Layout.astro";
   .container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 1em;
+    margin-bottom: 2rem;
   }
   .card {
     border-radius: 6px;
@@ -47,18 +68,29 @@ import Layout from "../../layouts/Layout.astro";
   }
   img {
     width: 300px;
+    width: 100%;
     height: 200px;
     object-fit: contain;
   }
-  h2 {
+  h1 {
+    text-transform: capitalize;
+  }
+  h3 {
+    text-wrap: wrap;
+    width: 100%;
+    max-width: 300px;
     text-align: center;
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
+    /* text-decoration: underline; */
+    /* text-decoration-thickness: 2px; */
     margin-bottom: 0;
   }
   .subtitle {
     margin: 0.5em;
     opacity: 0.8;
     text-align: center;
+  }
+  h2 {
+    font-size: 2em;
+    margin: 1em;
   }
 </style>
